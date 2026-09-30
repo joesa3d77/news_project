@@ -1,22 +1,12 @@
 import 'package:flutter/material.dart';
 import '../constants/app_colors.dart';
 
-/// الشاشة دي شكلها Static دلوقتي (بيانات ثابتة).
-/// لو حبيت توصلها بـ API حقيقي (زي OpenWeatherMap)، هتستبدل
-/// القيم الثابتة تحت بقيم جايه من الـ Response بتاع الـ API.
-///
-/// ملحوظة عن الشكل (Design):
-/// الشاشة فيها لونين خلفية زي التصميم بالظبط:
-/// - الجزء العلوي (الترحيب) خلفيته لافندر فاتح (AppColors.background).
-/// - باقي الشاشة (Cairo - EG وباقي البيانات) خلفيته أبيض.
 class WeatherScreen extends StatelessWidget {
   const WeatherScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      // الحاوية دي بتغطي كل الشاشة بلون أبيض، عشان تبقى مختلفة عن
-      // خلفية الـ MainScreen اللافندر اللي بتتشارك فيها كل الشاشات.
       color: Colors.white,
       child: SafeArea(
         child: Column(
@@ -73,7 +63,6 @@ class WeatherScreen extends StatelessWidget {
     );
   }
 
-  /// الجزء العلوي بخلفية اللافندر الفاتح، بالظبط زي التصميم.
   Widget _buildHeader() {
     return Container(
       width: double.infinity,
@@ -108,7 +97,6 @@ class WeatherScreen extends StatelessWidget {
     );
   }
 
-  /// زرار "Change Location" وأيقونة البين بعد النص، زي ترتيبها في التصميم.
   Widget _buildChangeLocationButton() {
     return SizedBox(
       width: double.infinity,
@@ -119,9 +107,7 @@ class WeatherScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 16),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
         ),
-        onPressed: () {
-          // لاحقاً: افتح شاشة اختيار مكان تانية
-        },
+        onPressed: () {},
         child: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
