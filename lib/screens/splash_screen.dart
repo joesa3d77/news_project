@@ -15,7 +15,6 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // بعد 2.5 ثانية ينتقل تلقائي لشاشة الـ Welcome
     Future.delayed(const Duration(milliseconds: 2500), () {
       if (!mounted) return;
       Navigator.pushReplacement(
@@ -30,14 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: Center(
-        // -----------------------------------------------------------
-        // هنا مكان اللوجو بتاعك (اللي شكله SVG في التصميم).
-        // 1) حط ملف اللوجو في: assets/icons/logo.svg
-        // 2) سيبه بنفس الاسم ده أو غيّر الاسم في السطر تحت.
-        //
-        // الـ FutureBuilder ده بس عشان التطبيق ميعملش كراش لو
-        // لسه مضفتش ملف الـ svg، وبيعرض اسم "Khabar" بدل منه مؤقتاً.
-        // -----------------------------------------------------------
+
         child: FutureBuilder(
           future: rootBundle.load('assets/icons/logo.svg'),
           builder: (context, snapshot) {

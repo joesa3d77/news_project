@@ -3,11 +3,6 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import '../constants/app_colors.dart';
 
-/// شاشة الـ Search: نفس شكل التصميم بالظبط.
-/// - صف فوق فيه اسم المستخدم (ثابت "joe") وجنبه أيقونة بحث للشكل فقط،
-///   من غير أي وظيفة أو إمكانية تعديل.
-/// - خريطة OpenStreetMap تحته (من غير API Key).
-/// - الدوس على الخريطة بيحط عليها علامة (Marker).
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
 
@@ -16,15 +11,12 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-  // إحداثيات ابتدائية (القاهرة كمثال) - غيّرها للمكان اللي محتاجه
   static const LatLng _initialPosition = LatLng(30.0444, 31.2357);
 
-  // اسم المستخدم ثابت في الكود - عايز تغيّره تبدّل القيمة هنا بس
   static const String _username = 'joe';
 
   final MapController _mapController = MapController();
 
-  // العلامات الظاهرة على الخريطة (بتتزود لما تدوس على الخريطة)
   final List<Marker> _markers = [];
 
   @override
@@ -33,7 +25,6 @@ class _SearchScreenState extends State<SearchScreen> {
     _addMarker(_initialPosition);
   }
 
-  // الدوس على أي نقطة في الخريطة بيحط عليها علامة جديدة
   void _onMapTap(TapPosition tapPosition, LatLng point) {
     _addMarker(point);
   }
@@ -99,7 +90,6 @@ class _SearchScreenState extends State<SearchScreen> {
                         ),
                       ),
                       onPressed: () {
-                        // هنا تحط اللوجيك بتاعك
                       },
                       child: const Text('Get Started'),
                     ),
@@ -113,8 +103,6 @@ class _SearchScreenState extends State<SearchScreen> {
     );
   }
 
-  /// الصف الثابت زي التصميم: اسم المستخدم + أيقونة بحث للشكل فقط
-  /// (مفيش أي onTap أو Logic، دور الأيقونة هنا بصري بس).
   Widget _buildTopBar() {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),

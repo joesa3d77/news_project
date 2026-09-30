@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import '../constants/app_colors.dart';
 import '../models/article.dart';
 
-/// كارت الخبر (صورة صغيرة + عنوان + تصنيف).
-/// بنستخدمه في أكتر من مكان (Home - Bookmark) عشان منكررش نفس الكود.
 class NewsCard extends StatelessWidget {
   final Article article;
   final VoidCallback onTap;
@@ -26,9 +24,6 @@ class NewsCard extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
-            // Image.network بيجيب الصورة من النت.
-            // لو عايز تستخدم صورة من عندك بدل كده:
-            // Image.asset('assets/images/my_image.png')
             child: Image.network(
               article.imageUrl,
               width: imageSize,

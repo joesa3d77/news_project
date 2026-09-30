@@ -10,13 +10,9 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // -----------------------------------------------------------
-          // الخلفية (صورة العمارات). حط الصورة بتاعتك هنا:
-          // assets/images/welcome_bg.jpg
-          // -----------------------------------------------------------
           Positioned.fill(
             child: Image.asset(
-              'assets/images/welcome_bg.jpg',
+              'assets/images/welcome.png',
               fit: BoxFit.cover,
               errorBuilder: (_, __, ___) => Container(
                 color: AppColors.primary,

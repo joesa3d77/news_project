@@ -20,7 +20,6 @@ class NewsApp extends StatelessWidget {
         fontFamily: 'Roboto',
         useMaterial3: true,
       ),
-      // أول شاشة بتفتح مع التطبيق
       home: const SplashScreen(),
     );
   }
