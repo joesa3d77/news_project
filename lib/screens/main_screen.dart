@@ -5,11 +5,6 @@ import 'search_screen.dart';
 import 'bookmark_screen.dart';
 import 'weather_screen.dart';
 
-/// الشاشة دي هي "الحاوية" اللي بتتحكم في الـ Bottom Navigation Bar
-/// وبتبدّل بين 4 تابات: Home - Search - Bookmark - Weather.
-///
-/// بنستخدم IndexedStack عشان كل شاشة تفضل محتفظة بحالتها
-/// (يعني لو بتعمل Scroll في شاشة ورجعتلها تانى، هتلاقيها زي ما سيبتها).
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
@@ -43,8 +38,6 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
-  /// بار سفلي بشكل بسيط (Container + Row) بدل BottomNavigationBar
-  /// الجاهز، عشان نقدر نتحكم في الشكل زي التصميم (بار أسود مدور).
   Widget _buildBottomBar() {
     return Container(
       margin: const EdgeInsets.fromLTRB(24, 0, 24, 20),

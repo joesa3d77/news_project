@@ -13,7 +13,6 @@ class BookmarkScreen extends StatefulWidget {
 }
 
 class _BookmarkScreenState extends State<BookmarkScreen> {
-  // بنجيب بس الأخبار المحفوظة (isBookmarked == true)
   late List<Article> _bookmarked =
       dummyArticles.where((a) => a.isBookmarked).toList();
 
@@ -69,8 +68,6 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
     );
   }
 
-  /// بيظهر الـ Dialog "Sure you want to delete this item?"
-  /// زي بالظبط اللي في التصميم، ويرجع true لو ضغط "Yes, Delete".
   Future<bool> _confirmDelete(Article article) async {
     final result = await showDialog<bool>(
       context: context,

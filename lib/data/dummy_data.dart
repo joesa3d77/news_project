@@ -1,10 +1,5 @@
 import '../models/article.dart';
 
-/// بيانات وهمية (Fake Data) بنستخدمها عشان نجرب الشكل بسرعة
-/// من غير ما نحتاج نعمل ربط مع سيرفر أو API حقيقي.
-///
-/// لما يبقى عندك API حقيقي، هتستبدل الليست دي بكول للـ API
-/// وترجع بيانات من نفس نوع Article.
 final List<Article> dummyArticles = [
   Article(
     title: "Experience the Serenity of Japan's Traditional Countryside",
