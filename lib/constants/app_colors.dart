@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// كل ألوان التطبيق في مكان واحد عشان لو حبيت تغيّر لون معين
-/// تغيّره من هنا بس مش تدور عليه في كل شاشة.
 class AppColors {
   static const primary = Color(0xFF3D5CFF);
   static const background = Color(0xFFF3F4FB);

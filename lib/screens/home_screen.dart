@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final banner = dummyArticles.first; // أول خبر بنستخدمه كبانر كبير
+    final banner = dummyArticles.first; 
     final popular = dummyArticles.skip(1).take(4).toList();
 
     return SafeArea(
